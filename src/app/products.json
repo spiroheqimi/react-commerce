@@ -1,0 +1,16 @@
+[
+  {
+    "id" : 1,
+    "name" : "T-shirt",
+    "sizes" : ["XS", "S","M","L","XL"],
+    "price" : 123.99,
+    "description" : "Men's T-Shirt"
+  },
+  {
+    "id" : 2,
+    "name" : "T-shirt",
+    "sizes" : ["XS", "S","M"],
+    "price" : 179.99,
+    "description" : "Men's T-Shirt"
+  }
+]
