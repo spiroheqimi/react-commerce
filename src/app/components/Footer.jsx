@@ -2,9 +2,16 @@
 
 import Link from "next/link";
 import { IoLocationSharp } from "react-icons/io5";
-import { BiLogoFacebook, BiLogoInstagram, BiLogoWhatsapp, BiLogoLinkedin, BiCopyright,BiPhone,} from "react-icons/bi";
-import { FiMail } from "react-icons/fi"
-import { IoIosArrowForward } from "react-icons/io"
+import {
+  BiLogoFacebook,
+  BiLogoInstagram,
+  BiLogoWhatsapp,
+  BiLogoLinkedin,
+  BiCopyright,
+  BiPhone,
+} from "react-icons/bi";
+import { FiMail } from "react-icons/fi";
+import { IoIosArrowForward } from "react-icons/io";
 
 export default function Footer() {
   return (
@@ -14,7 +21,9 @@ export default function Footer() {
           <h1 className="uppercase font-bold text-lg">Contact Details</h1>
           <div className="w-auto flex gap-3 justify-start ">
             <IoLocationSharp color="FFFFFF" size={30} />
-            <p className="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p className="text-xs">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
           </div>
           <div className="w-auto flex gap-3 justify-start items-center">
             <BiPhone color="FFFFFF" size={30} />
@@ -25,7 +34,6 @@ export default function Footer() {
             <p>spiroheqimi92@gmail.com</p>
           </div>
         </div>
-
 
         <div className="w-52 h-full flex flex-col text-xs gap-3 pl-10">
           <h1 className="uppercase font-bold text-lg">Products</h1>
@@ -63,8 +71,6 @@ export default function Footer() {
           </div>
         </div>
 
-      
-
         <div className="flex flex-col gap-5">
           <h1 className="uppercase font-bold text-lg">
             Join our newsletter now
@@ -79,7 +85,9 @@ export default function Footer() {
           </div>
 
           <div className="w-full">
-            <h1 className="text-xs font-bold">Get E-mail updates about our latest offers. </h1>
+            <h1 className="text-xs font-bold">
+              Get E-mail updates about our latest offers.{" "}
+            </h1>
           </div>
 
           <div className="flex gap-2">

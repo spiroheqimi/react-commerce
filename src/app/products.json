@@ -2,6 +2,7 @@
   {
     "id" : 1,
     "name" : "T-shirt",
+    "category" : "Sneakers",
     "sizes" : ["XS", "S","M","L","XL"],
     "price" : 123.99,
     "description" : "Men's T-Shirt"
@@ -9,8 +10,65 @@
   {
     "id" : 2,
     "name" : "T-shirt",
+    "category" : "Clothing",
+    "sizes" : ["XS", "S","M","L","XL"],
+    "price" : 123.99,
+    "description" : "Men's T-Shirt"
+  },
+  {
+    "id" : 3,
+    "name" : "T-shirt",
+    "category" : "Sneakers",
+    "sizes" : ["XS", "S","M","L","XL"],
+    "price" : 123.99,
+    "description" : "Men's T-Shirt"
+  },
+  {
+    "id" : 4,
+    "name" : "T-shirt",
+    "category" : "Sneakers",
+    "sizes" : ["XS", "S","M","L","XL"],
+    "price" : 123.99,
+    "description" : "Men's T-Shirt"
+  },
+  {
+    "id" : 5,
+    "name" : "T-shirt",
+    "category" : "Clothing",
+    "sizes" : ["XS", "S","M","L","XL"],
+    "price" : 123.99,
+    "description" : "Men's T-Shirt"
+  },
+  {
+    "id" : 6,
+    "name" : "T-shirt",
+    "category" : "Clothing",
+    "sizes" : ["XS", "S","M","L","XL"],
+    "price" : 123.99,
+    "description" : "Men's T-Shirt"
+  },
+  {
+    "id" : 7,
+    "name" : "T-shirt",
+    "category" : "Electronics",
+    "sizes" : ["XS", "S","M","L","XL"],
+    "price" : 23.99,
+    "description" : "Men's T-Shirt"
+  },
+  {
+    "id" : 8,
+    "name" : "T-shirt",
+    "category" : "Electronics",
+    "sizes" : ["XS", "S","M","L","XL"],
+    "price" : 27.99,
+    "description" : "Men's T-Shirt"
+  },
+  {
+    "id" : 9,
+    "name" : "T-shirt",
+    "category" : "Electronics",
     "sizes" : ["XS", "S","M"],
-    "price" : 179.99,
+    "price" : 49.99,
     "description" : "Men's T-Shirt"
   }
 ]

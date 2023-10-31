@@ -59,8 +59,7 @@ export default function Navbar() {
 
           <div className="flex justify-center items-center gap-6">
             <div className="flex justify-center items-center rounded-full border-3 px-4 border-black">
-            <input placeholder="Search" id="search-field" className="w-48 h-10  focus:placeholder-transparent focus:outline-none">
-              </input>
+            <input placeholder="Search" id="search-field" className="w-48 h-10  focus:placeholder-transparent focus:outline-none"></input>
               <button className="flex gap-2" id="search-button" /* onClick={searchField} */> 
                 <FiSearch size={25} />
               </button>

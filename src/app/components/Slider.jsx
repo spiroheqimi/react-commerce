@@ -122,7 +122,6 @@ export default function Slider() {
 }
 
 /* 
-  Products will have a link for the page they are on the website
   And an image src
   flex-nowrap and min-w-[%] makes them take % space within container and forcing them to overflow out of it 
   and we use overflow-clip to hide the overflow 

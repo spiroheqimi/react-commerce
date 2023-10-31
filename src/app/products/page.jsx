@@ -1,30 +1,50 @@
-import Slider from "../components/Slider2"
+// pages/index.js
 
+"use client"
+
+import React, { useState } from 'react';
+import FilterSidebar from '@/app/components/FilterSidebar'
+import ProductCard from '@/app/components/ProductCard'
+import products from '@/app/products.json'
 
 export default function page() {
-  return (
-    <main className="w-screen min-h-screen px-28 overflow-hidden">
-      <section className="w-full h-screen flex gap-20 p-20">
-          <div className="w-[20%] h-full"> 
-            <h1>Sidebar</h1>
-          </div>
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedPriceRanges, setSelectedPriceRanges] = useState([]);
 
-          <div>
-            <h1>Search bar</h1>
-            <h1>Recommendation</h1>
-            <h1>Products</h1>
+  const filteredProducts = products.filter((product) => {
+    const isCategoryMatch = selectedCategories.length === 0 || selectedCategories.includes(product.category);
+
+    const price = product.price;
+    const isPriceRangeMatch = selectedPriceRanges.length === 0 || selectedPriceRanges.some((range) => {
+        const [min, max] = range.split('-').map(parseFloat);
+        return price >= min && price <= max;
+      });
+
+    return isCategoryMatch && isPriceRangeMatch;
+  });
+
+
+  const handleFilter = (selectedCategories, selectedPriceRanges) => {
+    setSelectedCategories(selectedCategories);
+    setSelectedPriceRanges(selectedPriceRanges);
+    
+  };
+
+  return (
+    <main className="w-screen min-h-screen flex px-10">
+      <FilterSidebar onFilter={handleFilter} />
+      <div className="w-full h-full py-10 grid grid-cols-4 gap-5 justify-start items-start overflow-hidden">
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="w-90">
+            <ProductCard key={product.id} product={product}/>
           </div>
-      </section>
+        ))}
+      </div>
     </main>
-  )
-}
+  );
+};
+
 
 /* 
-
-  Product will have : Name, Colors, Sizes, Price, Description, Image
-  Dynamic routing for products
-  Image, Color, Size, Description (DATA) will come from "database" and only the specific clicked product will be shown
-  I want to dynamicaly add the color circles ( we pass 2 arguments on a function , array for the color and integer for the number of circles )
-  The same will happen for Sizes 
 
 */
