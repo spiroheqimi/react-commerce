@@ -1,11 +1,10 @@
-// pages/index.js
-
 "use client"
 
 import React, { useState } from 'react';
 import FilterSidebar from '@/app/components/FilterSidebar'
 import ProductCard from '@/app/components/ProductCard'
 import products from '@/app/products.json'
+
 
 export default function page() {
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -44,7 +43,3 @@ export default function page() {
   );
 };
 
-
-/* 
-
-*/

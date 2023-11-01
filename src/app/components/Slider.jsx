@@ -1,79 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Shirt from "../public/shirt2.png";
+import products from "../products.json"
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 import { FaRegHeart } from "react-icons/fa"
 import Link from "next/link";
 
 export default function Slider() {
-  const products = [
-    {
-      id: 1,
-      name: "T-Shirt",
-      price: 123.99,
-      brand: "Gucci",
-      link: "/products/2",
-      img: Shirt
-    },
-    {
-      id: 2,
-      name: "T-Shirt",
-      price: 123.99,
-      brand: "Gucci",
-      link: "/products/1",
-      img: Shirt
-    },
-    {
-      id: 3,
-      name: "T-Shirt",
-      price: 123.99,
-      brand: "Gucci",
-      link: "/products/1",
-      img: Shirt
-    },
-    {
-      id: 4,
-      name: "T-Shirt",
-      price: 123.99,
-      brand: "Gucci",
-      link: "/products/1",
-      img: Shirt
-    },
-    {
-      id: 5,
-      name: "T-Shirt",
-      price: 123.99,
-      brand: "Gucci",
-      link: "/products/1",
-      img: Shirt
-    },
-    {
-      id: 6,
-      name: "T-Shirt",
-      price: 123.99,
-      brand: "Gucci",
-      link: "/products/1",
-      img: Shirt
-    },
-    {
-      id: 7,
-      name: "T-Shirt",
-      price: 123.99,
-      brand: "Gucci",
-      link: "/products/1",
-      img: Shirt
-    },
-    {
-      id: 8,
-      name: "T-Shirt",
-      price: 123.99,
-      brand: "Gucci",
-      link: "/products/1",
-      img: Shirt
-    },
-  ];
-
+  
   const Right = () => {
     document.getElementById('carousel').scrollLeft += 460;
   };
@@ -94,9 +28,9 @@ export default function Slider() {
                 <div className="w-full flex justify-end">
                   <button className="w-10 h-10 pr-4 text-lg text-secondary-color font-semibold "> <FaRegHeart size={25}  /> </button>
                 </div>
-                <Link href={product.link}>
+                <Link href={product.link}>  {/*  Link should wrap the entire contianer. Rn only if the User clicks on image it will redirect. */}
                 <Image
-                  src={product.img}
+                  src={product.image}
                   width={200}
                   height={200}
                   alt={product.name}

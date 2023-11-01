@@ -1,68 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Shirt from "../public/shirt2.png";
+import products from "../products.json"
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 
 export default function Slider() {
-  const products = [
-    {
-      id: 1,
-      name: "T-Shirt",
-      price: 100,
-      brand: "Gucci",
-      img: Shirt
-    },
-    {
-      id: 2,
-      name: "T-Shirt",
-      price: 100,
-      brand: "Gucci",
-      img: Shirt
-    },
-    {
-      id: 3,
-      name: "T-Shirt",
-      price: 100,
-      brand: "Gucci",
-      img: Shirt
-    },
-    {
-      id: 4,
-      name: "T-Shirt",
-      price: 100,
-      brand: "Gucci",
-      img: Shirt
-    },
-    {
-      id: 5,
-      name: "T-Shirt",
-      price: 100,
-      brand: "Gucci",
-      img: Shirt
-    },
-    {
-      id: 6,
-      name: "T-Shirt",
-      price: 100,
-      brand: "Gucci",
-      img: Shirt
-    },
-    {
-      id: 7,
-      name: "T-Shirt",
-      price: 100,
-      brand: "Gucci",
-      img: Shirt
-    },
-    {
-      id: 8,
-      name: "T-Shirt",
-      price: 100,
-      brand: "Gucci",
-      img: Shirt
-    },
-  ];
 
   const Right = () => {
     document.getElementById('carousel').scrollLeft += 500;
@@ -82,7 +24,7 @@ export default function Slider() {
               <div className="flex flex-col w-full justify-center items-center">
                 <div className="w-full flex justify-center">
                 <Image
-                  src={product.img}
+                  src={product.image}
                   width={400}
                   height={400}
                   alt={product.name}

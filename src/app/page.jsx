@@ -1,5 +1,5 @@
 import Image from "next/image";
-import menimg from "@/app/public/men-collection.png";
+import menimg from "public/men-collection.png"
 import { FiPhoneCall } from "react-icons/fi";
 import Slider from "./components/Slider";
 
