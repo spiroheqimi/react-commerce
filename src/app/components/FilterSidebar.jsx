@@ -51,7 +51,7 @@ export default function FilterSidebar({ onFilter }) {
           />
           Sneakers
         </label>
-        {/* Add more category options */}
+        
       </div>
       <div className="w-60 flex flex-col">
         <h1 className="py-2">Price</h1>
@@ -82,7 +82,7 @@ export default function FilterSidebar({ onFilter }) {
           />
           $100 - $200
         </label>
-        {/* Add more price range options */}
+        
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 
 export default function Slider() {
 
-  const Right = () => {
+  const Right = () => {  // Has to take the scroll size from device size ( 500px on phone is ...)
     document.getElementById('carousel').scrollLeft += 500;
   };
 
@@ -47,11 +47,7 @@ export default function Slider() {
   flex-nowrap and min-w-[%] makes them take % space within container and forcing them to overflow out of it 
   and we use overflow-clip to hide the overflow 
   
-  Can store products on a JSON file / Leave it like this since its small content
-  
-  - Button icons
-  - Card styling 
-  - Card content
+
 
 
 */

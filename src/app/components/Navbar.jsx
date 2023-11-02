@@ -1,20 +1,29 @@
-"use client"
+"use client";
 
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaRegHeart } from "react-icons/fa";
-import { FiPhoneCall, FiSearch, FiShoppingBag } from "react-icons/fi";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaRegHeart,
+} from "react-icons/fa";
+import { FiPhoneCall, FiSearch } from "react-icons/fi";
 import Link from "next/link";
-
+import { useState } from "react";
+import Cart from "@/app/components/Cart"
 
 export default function Navbar() {
+  const [cartIsOpen, setCartIsOpen] = useState(false);
 
-  // Default we set to be hidden and we create the function "searchField"  
-  // Accessing the display property using DOM 
-  const searchField = () =>{
+  const openCart = () => setCartIsOpen(true);
+  const closeCart = () => setCartIsOpen(false);
+
+  // Default we set to be hidden and we create the function "searchField"
+  // Accessing the display property using DOM
+  const searchField = () => {
     document.getElementById("search-field").style.display = "block";
-    document.getElementById("search-field").style.transition = "ease-in"
-    document.getElementById("search-field").style.transitionDelay = "200"
-  } 
-
+    document.getElementById("search-field").style.transition = "ease-in";
+    document.getElementById("search-field").style.transitionDelay = "200";
+  };
 
   return (
     <div>
@@ -32,14 +41,12 @@ export default function Navbar() {
             </button>
           </div>
           <div className="flex gap-6">
-          <button className="text-white font-bold"> Sign In </button> 
-          <button className="text-white font-bold"> Sign Up </button> 
+            <button className="text-white font-bold"> Sign In </button>
+            <button className="text-white font-bold"> Sign Up </button>
           </div>
-          
         </div>
 
         <div className="flex bg-white justify-between items-center h-20 px-20">
-
           <div className="flex items-center gap-6">
             <div className="flex gap-5 items-center">
               <FiPhoneCall color="#BD995B" size={40} />
@@ -54,27 +61,38 @@ export default function Navbar() {
           </div>
 
           <div className="ml-32">
-            <Link className="text-4xl font-bold" href="/">Logo</Link>
+            <Link className="text-4xl font-bold" href="/">
+              Logo
+            </Link>
           </div>
 
           <div className="flex justify-center items-center gap-6">
             <div className="flex justify-center items-center rounded-full border-3 px-4 border-black">
-            <input placeholder="Search" id="search-field" className="w-48 h-10  focus:placeholder-transparent focus:outline-none"></input>
-              <button className="flex gap-2" id="search-button" /* onClick={searchField} */> 
+              <input
+                placeholder="Search"
+                id="search-field"
+                className="w-48 h-10  focus:placeholder-transparent focus:outline-none"
+              ></input>
+              <button
+                className="flex gap-2"
+                id="search-button" /* onClick={searchField} */
+              >
                 <FiSearch size={25} />
               </button>
             </div>
             <button>
               <FaRegHeart size={25} />
             </button>
-            <button>
-              <FiShoppingBag size={25} />
-            </button>
+            <div>
+                <Cart isOpen={cartIsOpen} closeCart={closeCart} />       
+            </div>
           </div>
         </div>
 
         <div className="bg-white flex h-12 items-center justify-center gap-12 font-bold">
-          <Link href="/" className="text-secondary-color underline-offset-2"> HOME </Link>
+          <Link href="/" className="text-secondary-color underline-offset-2">
+            HOME
+          </Link>
           <Link href="/about"> ABOUT US </Link>
           <Link href="/contact"> CONTACT </Link>
           <Link href="/arrivals"> NEW ARRIVALS </Link>
@@ -84,5 +102,3 @@ export default function Navbar() {
     </div>
   );
 }
-
-

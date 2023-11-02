@@ -28,7 +28,7 @@ export default function Slider() {
                 <div className="w-full flex justify-end">
                   <button className="w-10 h-10 pr-4 text-lg text-secondary-color font-semibold "> <FaRegHeart size={25}  /> </button>
                 </div>
-                <Link href={product.link}>  {/*  Link should wrap the entire contianer. Rn only if the User clicks on image it will redirect. */}
+                <Link href={product.link}>  {/* Link should wrap the entire contianer. Rn only if the User clicks on image it will redirect. */}
                 <Image
                   src={product.image}
                   width={200}
@@ -56,15 +56,9 @@ export default function Slider() {
 }
 
 /* 
-  And an image src
   flex-nowrap and min-w-[%] makes them take % space within container and forcing them to overflow out of it 
   and we use overflow-clip to hide the overflow 
   
   Can store products on a JSON file / Leave it like this since its small content
-  
-  - Button icons
-  - Card styling 
-  - Card content
-
 
 */
