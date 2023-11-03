@@ -6,7 +6,7 @@ import {
   FaWhatsapp,
   FaRegHeart,
 } from "react-icons/fa";
-import { FiPhoneCall, FiSearch } from "react-icons/fi";
+import { FiPhoneCall, FiSearch, FiShoppingBag } from "react-icons/fi";
 import Link from "next/link";
 import { useState } from "react";
 import Cart from "@/app/components/Cart"
@@ -16,15 +16,7 @@ export default function Navbar() {
 
   const openCart = () => setCartIsOpen(true);
   const closeCart = () => setCartIsOpen(false);
-
-  // Default we set to be hidden and we create the function "searchField"
-  // Accessing the display property using DOM
-  const searchField = () => {
-    document.getElementById("search-field").style.display = "block";
-    document.getElementById("search-field").style.transition = "ease-in";
-    document.getElementById("search-field").style.transitionDelay = "200";
-  };
-
+ 
   return (
     <div>
       <nav className="w-full flex flex-col justify-center">
@@ -83,9 +75,9 @@ export default function Navbar() {
             <button>
               <FaRegHeart size={25} />
             </button>
-            <div>
-                <Cart isOpen={cartIsOpen} closeCart={closeCart} />       
-            </div>
+              <Link href="/ShoppingCart">
+                <FiShoppingBag size={25} />
+              </Link>    
           </div>
         </div>
 
