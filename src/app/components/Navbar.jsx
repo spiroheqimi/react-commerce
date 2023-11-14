@@ -8,15 +8,8 @@ import {
 } from "react-icons/fa";
 import { FiPhoneCall, FiSearch, FiShoppingBag } from "react-icons/fi";
 import Link from "next/link";
-import { useState } from "react";
-import Cart from "@/app/components/Cart"
 
 export default function Navbar() {
-  const [cartIsOpen, setCartIsOpen] = useState(false);
-
-  const openCart = () => setCartIsOpen(true);
-  const closeCart = () => setCartIsOpen(false);
- 
   return (
     <div>
       <nav className="w-full flex flex-col justify-center">
@@ -38,24 +31,19 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="flex bg-white justify-between items-center h-20 px-20">
-          <div className="flex items-center gap-6">
-            <div className="flex gap-5 items-center">
-              <FiPhoneCall color="#BD995B" size={40} />
-
-              <div className="flex flex-col">
-                <h1 className="text-secondary-color text-xl font-bold">
-                  Call us
-                </h1>
-                <span className="font-bold"> 069 35 35 355 </span>
-              </div>
-            </div>
+        <div className="bg-white w-full h-20 px-20 flex justify-between items-center  ">
+          <div className="">
+            <Link className="text-4xl font-bold" href="/">
+              Logo {/*  I have to center this */}
+            </Link>
           </div>
 
-          <div className="ml-32">
-            <Link className="text-4xl font-bold" href="/">
-              Logo
-            </Link>
+          <div className="bg-white flex h-12 items-center justify-center gap-12 font-bold">
+            <Link href="/"> HOME </Link>
+            <Link href="/about"> ABOUT US </Link>
+            <Link href="/arrivals"> NEW ARRIVALS </Link>
+            <Link href="/products"> PRODUCTS </Link>
+            <Link href="/contact"> CONTACT </Link>
           </div>
 
           <div className="flex justify-center items-center gap-6">
@@ -65,30 +53,17 @@ export default function Navbar() {
                 id="search-field"
                 className="w-48 h-10  focus:placeholder-transparent focus:outline-none"
               ></input>
-              <button
-                className="flex gap-2"
-                id="search-button" /* onClick={searchField} */
-              >
+              <button className="flex gap-2" id="search-button">
                 <FiSearch size={25} />
               </button>
             </div>
             <button>
               <FaRegHeart size={25} />
             </button>
-              <Link href="/ShoppingCart">
-                <FiShoppingBag size={25} />
-              </Link>    
+            <Link href="/ShoppingCart">
+              <FiShoppingBag size={25} />
+            </Link>
           </div>
-        </div>
-
-        <div className="bg-white flex h-12 items-center justify-center gap-12 font-bold">
-          <Link href="/" className="text-secondary-color underline-offset-2">
-            HOME
-          </Link>
-          <Link href="/about"> ABOUT US </Link>
-          <Link href="/contact"> CONTACT </Link>
-          <Link href="/arrivals"> NEW ARRIVALS </Link>
-          <Link href="/products"> PRODUCTS </Link>
         </div>
       </nav>
     </div>

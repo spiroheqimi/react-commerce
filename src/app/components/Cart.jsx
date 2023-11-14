@@ -8,8 +8,9 @@ export default function Cart ({ product }) {
 
 
 /* 
-  Product ID pages will send the product into a component
-
-
+  Adding the products on a Context and then we wrap Cart page with this Context so it shows these items.
+  ! How will I deal with storing these products on memory 
+    --  localstorage ?
+    --  cookies ?
 
 */

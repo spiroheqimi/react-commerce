@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <>
       <section className="bottom-0 w-screen h-80 bg-secondary-color flex gap-15 justify-center text-white px-40 py-16 ">
-        <div className="w-80 h-full flex flex-col text-sm gap-4">
+        <div className="w-80 h-full flex flex-col text-sm font-medium tracking-wide gap-4">
           <h1 className="uppercase font-bold text-lg">Contact Details</h1>
           <div className="w-auto flex gap-3 justify-start ">
             <IoLocationSharp color="FFFFFF" size={30} />
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-52 h-full flex flex-col text-xs gap-3 pl-10">
+        <div className="w-52 h-full flex flex-col text-sm font-medium tracking-wide gap-3 pl-10">
           <h1 className="uppercase font-bold text-lg">Products</h1>
           <div className="w-full flex gap-2 justify-start items-center">
             <IoIosArrowForward color="FFFFFF" size={10} />
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-60 h-full flex flex-col text-xs gap-3 px-10">
+        <div className="w-68 h-full flex flex-col text-sm font-medium tracking-wide gap-3 px-10">
           <h1 className="uppercase font-bold text-lg">Services</h1>
           <div className="w-full flex gap-2 justify-start items-center">
             <IoIosArrowForward color="FFFFFF" size={10} />
@@ -72,16 +72,16 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-5">
-          <h1 className="uppercase font-bold text-lg">
+          <h1 className="uppercase font-bold tracking-wide text-lg">
             Join our newsletter now
           </h1>
           <div className="flex gap-3">
             <input
               placeholder="Email Address"
               type="text"
-              className="border-2 rounded-md border-white bg-transparent placeholder:text-white placeholder:text-sm px-4 h-10 focus:outline-none focus:placeholder-transparent"
+              className="border-2 rounded-md border-white bg-transparent placeholder:text-white placeholder:text-sm px-4 py-2 focus:outline-none focus:placeholder-transparent"
             />
-            <button className="w-24 h-10 bg-black rounded-md ">Submit</button>
+            <button className="px-8 py-2 bg-black rounded-md text-base font-medium">Submit</button>
           </div>
 
           <div className="w-full">
