@@ -1,10 +1,27 @@
-export default function Cart () {
+"use client"
+
+import { useCartContext } from "@/app/ShoppingCart/page";
+
+export default function ShoppingCart() {
+
+  const { products } = useCartContext()
+
+
+
   return (
-    <div> 
+    <div>
       <h1> Cart page </h1>
     </div>
   );
-};
+}
+
+
+/* 
+  This component will map through products
+
+
+*/
+
 
 
 /* 

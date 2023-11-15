@@ -42,7 +42,7 @@ export default function ({ params }) {
                   BUY
                 </button>
                 <button className="bg-white py-2 px-8 rounded-md border-[3px] border-black font-bold hover:bg-black hover:text-white focus:bg-black focus:text-white">
-                  ADD TO CHART
+                  ADD TO CHART {/*  THIS BUTTON WILL ADD INTO THE CONTEXT */}
                 </button>
               </div>
               <h1 className="w-full font-bold text-3xl"> Details </h1>
@@ -59,7 +59,5 @@ export default function ({ params }) {
 
 /* 
 
-  All we have to do is provide each picture on the website with a redirecting link that will have the ID of the product
-  and then the page will be dynamically add the product data
 
 */

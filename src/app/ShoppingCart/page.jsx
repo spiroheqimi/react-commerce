@@ -1,9 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { createContext, useState, useContext } from "react";
+import { CartProducts } from "@/app/components/ShoppingCart";
+
+export const Cart = createContext<Object>(null);
 
 export default function page() {
-  const [sum, setSum] = useState();
+  const [products, setProducts] = useState(null);
+  const [sum, setSum] = useState(0);
 
   function cartSum() {
     /*  the function will take products from Context */
@@ -24,20 +28,25 @@ export default function page() {
         <h1> Products </h1>
         <div className="w-full h-full ">
           <h1> Here will show the lsit of products added on cart </h1>
-          {/*  
-            <CartProvider value={products}>
-              <Cart/ >   
-            <CartProdiver/>
-          */}
+          <Cart.Provider value={ products }>
+            <CartProducts />
+          </Cart.Provider>
         </div>
       </div>
     </div>
   );
 }
 
+export function useCartContext() {
+  const context = useContext(Cart);
+  if (!context) {
+    throw new Error("Cart its not inside the CartProvider");
+  }
+  return context;
+}
+
 /* 
-   commit Changes- header, footer, text, cart 
 
-
+  I need to add a button component for adding to cart that will have the function of updating the state of products 
 
 */

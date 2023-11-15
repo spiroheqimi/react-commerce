@@ -6,7 +6,7 @@ import {
   FaWhatsapp,
   FaRegHeart,
 } from "react-icons/fa";
-import { FiPhoneCall, FiSearch, FiShoppingBag } from "react-icons/fi";
+import { FiSearch, FiShoppingBag } from "react-icons/fi";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -14,7 +14,7 @@ export default function Navbar() {
     <div>
       <nav className="w-full flex flex-col justify-center">
         <div className="sticky flex bg-secondary-color justify-between items-center h-13 px-20 ">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <button className="rounded-full border-2 border-white p-1">
               <FaFacebookF color="#FFFFFF" />
             </button>
@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="bg-white w-full h-20 px-20 flex justify-between items-center  ">
           <div className="">
             <Link className="text-4xl font-bold" href="/">
-              Logo {/*  I have to center this */}
+              Brand
             </Link>
           </div>
 
