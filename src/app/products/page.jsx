@@ -26,7 +26,6 @@ export default function page() {
   const handleFilter = (selectedCategories, selectedPriceRanges) => {
     setSelectedCategories(selectedCategories);
     setSelectedPriceRanges(selectedPriceRanges);
-    
   };
 
   return (

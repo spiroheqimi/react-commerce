@@ -1,12 +1,13 @@
 "use client";
 
 import React, { createContext, useState, useContext } from "react";
-import { CartProducts } from "@/app/components/ShoppingCart";
+import CartContext from "../components/CartContext";
 
-export const Cart = createContext<Object>(null);
+
+export const Cart = createContext(null);
 
 export default function page() {
-  const [products, setProducts] = useState(null);
+
   const [sum, setSum] = useState(0);
 
   function cartSum() {
@@ -28,9 +29,9 @@ export default function page() {
         <h1> Products </h1>
         <div className="w-full h-full ">
           <h1> Here will show the lsit of products added on cart </h1>
-          <Cart.Provider value={ products }>
-            <CartProducts />
-          </Cart.Provider>
+          <CartContext>
+            
+          </CartContext>
         </div>
       </div>
     </div>
@@ -38,11 +39,7 @@ export default function page() {
 }
 
 export function useCartContext() {
-  const context = useContext(Cart);
-  if (!context) {
-    throw new Error("Cart its not inside the CartProvider");
-  }
-  return context;
+  return useContext(Cart);
 }
 
 /* 

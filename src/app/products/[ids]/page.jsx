@@ -1,7 +1,15 @@
 import Products from "@/app/products.json";
 import Slider from "@/app/components/Slider2";
+import { useCart } from "@/app/components/CartContext";
 
 export default function ({ params }) {
+
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (item) => {
+    addToCart(item);
+  };
+
   return (
     <div key={params.ids} className="w-screen min-h-screen px-28 overflow-hidden">
       {Products.filter((Products) => Products.id == params.ids).map((product) => (
@@ -41,8 +49,10 @@ export default function ({ params }) {
                 <button className="bg-black py-2 px-8 rounded-md border-[3px] border-black text-white font-bold hover:bg-white hover:border-[3px] hover:border-black hover:text-black ">
                   BUY
                 </button>
-                <button className="bg-white py-2 px-8 rounded-md border-[3px] border-black font-bold hover:bg-black hover:text-white focus:bg-black focus:text-white">
-                  ADD TO CHART {/*  THIS BUTTON WILL ADD INTO THE CONTEXT */}
+                <button 
+                  onClick={() => handleAddToCart(product)}
+                  className="bg-white py-2 px-8 rounded-md border-[3px] border-black font-bold hover:bg-black hover:text-white focus:bg-black focus:text-white">
+                  ADD TO CHART  {/*  I need to test if this works , i can test the cartItems with console.log */}
                 </button>
               </div>
               <h1 className="w-full font-bold text-3xl"> Details </h1>
