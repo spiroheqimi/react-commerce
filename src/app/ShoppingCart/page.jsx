@@ -2,6 +2,7 @@
 
 import React, { createContext, useState, useContext } from "react";
 import CartContext from "../components/CartContext";
+import ShoppingCart from "../components/ShoppingCart";
 
 
 export const Cart = createContext(null);
@@ -30,7 +31,7 @@ export default function page() {
         <div className="w-full h-full ">
           <h1> Here will show the lsit of products added on cart </h1>
           <CartContext>
-            
+            <ShoppingCart/>
           </CartContext>
         </div>
       </div>

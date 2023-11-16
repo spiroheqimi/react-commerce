@@ -1,10 +1,12 @@
+"use client"
+
 import Products from "@/app/products.json";
 import Slider from "@/app/components/Slider2";
 import { useCart } from "@/app/components/CartContext";
 
 export default function ({ params }) {
 
-  const { addToCart } = useCart();
+  const { cartItems, addToCart, removeFromCart, clearCart  } = useCart();
 
   const handleAddToCart = (item) => {
     addToCart(item);
