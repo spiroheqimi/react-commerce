@@ -1,8 +1,8 @@
 import React from "react";
-import { useCart } from "./CartContext"; 
+import { useCart } from "../../Context/CartContext"; 
 
 export default function () {
-  const { cartItems, removeFromCart, clearCart } = useCart();
+  const { cartItems , removeFromCart, clearCart } = useCart();
 
   const handleRemoveFromCart = (index) => {
     removeFromCart(index);
@@ -23,7 +23,11 @@ export default function () {
           </li>
         ))}
       </ul>
-      <button onClick={handleClearCart}>Clear Cart</button>
+      <button 
+        className="bg-black my-10 py-4 px-16 rounded-md border-[3px] border-black text-white text-xl font-semibold hover:bg-white hover:border-[3px] hover:border-black hover:text-black"
+        onClick={handleClearCart}>
+        Clear Cart
+        </button>
     </div>
   );
 }
@@ -41,7 +45,7 @@ export default function () {
 
 
 /* 
-  I can use my costum too to access the Context Data and then modify it in every page that imports the hook
+ 
 
   This will be the component that i will add into the page and it will map the products added into cart
   If there is no product i want to show " No products on Bag " and a " Link tag" that takes to the products

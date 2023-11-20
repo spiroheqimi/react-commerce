@@ -2,11 +2,11 @@
 
 import Products from "@/app/products.json";
 import Slider from "@/app/components/Slider2";
-import { useCart } from "@/app/components/CartContext";
+import { useCart } from "../../../Context/CartContext";
 
 export default function ({ params }) {
 
-  const { cartItems, addToCart, removeFromCart, clearCart  } = useCart();
+  const { addToCart  } = useCart();
 
   const handleAddToCart = (item) => {
     addToCart(item);
@@ -54,7 +54,7 @@ export default function ({ params }) {
                 <button 
                   onClick={() => handleAddToCart(product)}
                   className="bg-white py-2 px-8 rounded-md border-[3px] border-black font-bold hover:bg-black hover:text-white focus:bg-black focus:text-white">
-                  ADD TO CHART  {/*  I need to test if this works , i can test the cartItems with console.log */}
+                  ADD TO CHART  
                 </button>
               </div>
               <h1 className="w-full font-bold text-3xl"> Details </h1>
@@ -70,6 +70,6 @@ export default function ({ params }) {
 }
 
 /* 
-
-
+  Will use CartContext here so i can add into state - cartItems 
+  and since the Providers wraps {children} on Layout i can use it everywhere i call useCart()
 */
