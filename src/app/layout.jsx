@@ -1,6 +1,6 @@
 "use client"
 
-import { CartProvider } from "@/Context/CartContext";
+import { CartProvider } from "../Context/CartContext";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
@@ -12,11 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
         <CartProvider>
+        <Navbar/>
         {children}
-        </CartProvider>
         <Footer/>
+        </CartProvider>
       </body>
     </html>
   );

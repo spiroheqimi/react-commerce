@@ -1,7 +1,7 @@
 "use client"
 
-import Products from "@/app/products.json";
-import Slider from "@/app/components/Slider2";
+import Products from "../../products.json";
+import Slider from "../../components/Slider2";
 import { useCart } from "../../../Context/CartContext";
 
 export default function ({ params }) {
@@ -53,7 +53,7 @@ export default function ({ params }) {
                 </button>
                 <button 
                   onClick={() => handleAddToCart(product)}
-                  className="bg-white py-2 px-8 rounded-md border-[3px] border-black font-bold hover:bg-black hover:text-white focus:bg-black focus:text-white">
+                  className="bg-white py-2 px-8 rounded-md border-[3px] border-black font-bold hover:bg-black hover:text-white active:scale-95 transition-transform">
                   ADD TO CHART  
                 </button>
               </div>

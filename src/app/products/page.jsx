@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useState } from 'react';
-import FilterSidebar from '@/app/components/FilterSidebar'
-import ProductCard from '@/app/components/ProductCard'
-import products from '@/app/products.json'
+import FilterSidebar from '../components/FilterSidebar'
+import ProductCard from '../components/ProductCard'
+import products from '../products.json'
 
 
 export default function page() {
