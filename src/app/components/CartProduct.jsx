@@ -14,7 +14,7 @@ export default function CartProduct({ product }) {
           />
         </div>
 
-        <div>
+        <div className="w-full"> 
           <p>Category: {product.category}</p>
           <p>Price: ${product.price}</p>
           <p>{product.description}</p>

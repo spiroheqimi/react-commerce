@@ -24,7 +24,7 @@ export default function () {
       <div className="w-screen h-full flex flex-col justify-center">
         {cartItems.map((item, index) => (
           <div className="w-full h-full flex justify-between items-center px-36 py-5" key={index}>
-            <CartProduct key={index} product={item}/>
+            <CartProduct product={item}/>
             <button
               className="bg-black my-10 py-2 px-10 rounded-md border-[3px] border-black text-white text-sm font-medium hover:bg-white hover:border-[3px] hover:border-black hover:text-black"
               onClick={() => handleRemoveFromCart(index)}

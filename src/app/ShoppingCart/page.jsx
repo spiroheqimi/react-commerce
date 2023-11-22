@@ -32,6 +32,8 @@ export default function page() {
 
 /* 
 
-  Check out will not be implemented
+  Will save the array into the localstorage
+  - First i need to make sure that if any data is in local storage, it should be added on CartContext objects
+  - "clear cart" should clear local storage too
 
 */

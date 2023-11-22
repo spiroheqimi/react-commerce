@@ -18,7 +18,7 @@
     "price" : 123.99,
     "quantity": 0,
     "image" : "/shirt2.png",
-    "link" : "/products/1",
+    "link" : "/products/2",
     "description" : "Men's T-Shirt"
   },
   {
@@ -29,7 +29,7 @@
     "price" : 123.99,
     "quantity": 0,
     "image" : "/shirt2.png",
-    "link" : "/products/1",
+    "link" : "/products/3",
     "description" : "Men's T-Shirt"
   },
   {
@@ -40,7 +40,7 @@
     "price" : 123.99,
     "quantity": 0,
     "image" : "/shirt2.png",
-    "link" : "/products/1",
+    "link" : "/products/4",
     "description" : "Men's T-Shirt"
   },
   {
@@ -51,7 +51,7 @@
     "price" : 123.99,
     "quantity": 0,
     "image" : "/shirt2.png",
-    "link" : "/products/1",
+    "link" : "/products/5",
     "description" : "Men's T-Shirt"
   },
   {
@@ -62,7 +62,7 @@
     "price" : 123.99,
     "quantity": 0,
     "image" : "/shirt2.png",
-    "link" : "/products/1",
+    "link" : "/products/6",
     "description" : "Men's T-Shirt"
   },
   {
@@ -73,7 +73,7 @@
     "price" : 23.99,
     "quantity": 0,
     "image" : "/shirt2.png",
-    "link" : "/products/1",
+    "link" : "/products/7",
     "description" : "Men's T-Shirt"
   },
   {
@@ -84,7 +84,7 @@
     "price" : 27.99,
     "quantity": 0,
     "image" : "/shirt2.png",
-    "link" : "/products/1",
+    "link" : "/products/8",
     "description" : "Men's T-Shirt"
   },
   {
@@ -95,7 +95,7 @@
     "price" : 49.99,
     "quantity": 0,
     "image" : "/shirt2.png",
-    "link" : "/products/1",
+    "link" : "/products/9",
     "description" : "Men's T-Shirt"
   }
 ]

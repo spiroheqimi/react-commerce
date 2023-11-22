@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import menimg from "public/men-collection.png"
 import { FiPhoneCall } from "react-icons/fi";
 import Slider from "./components/Slider";
@@ -141,9 +142,12 @@ export default function Home() {
             <Slider />
             
           </div>
+          <Link href="/products">
           <button className="w-40 bg-black text-white py-3 px-5">
             VIEW MORE
           </button>
+          </Link>
+          
         </div>
     </main>
     </>
