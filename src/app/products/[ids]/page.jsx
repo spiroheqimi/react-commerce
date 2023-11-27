@@ -38,7 +38,7 @@ export default function ({ params }) {
 
                 <div className="w-full flex gap-4">
                   {product.sizes.map((size) => (
-                    <div>
+                    <div> 
                       <button className="bg-white py-1 px-8 rounded-md border-[3px] border-black font-bold hover:bg-black hover:text-white focus:bg-black focus:text-white">
                         {size}
                       </button>

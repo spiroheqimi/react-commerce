@@ -9,7 +9,6 @@ export default function page() {
   // The number in the end of the reduce method sets the "total" value.
   const totalCartPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
-  
   // I can add a function that displays " Your Cart is empty" when cart is empty
 
   return (

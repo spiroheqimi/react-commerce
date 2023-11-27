@@ -6,7 +6,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 
 export default function Slider() {
 
-  const Right = () => {  // Has to take the scroll size from device size ( 500px on phone is ...)
+  const Right = () => {  // Has to take the scroll %size from device size ( 500px on phone is ...)
     document.getElementById('carousel').scrollLeft += 500;
   };
 

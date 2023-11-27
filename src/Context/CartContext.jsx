@@ -39,14 +39,24 @@ export const CartProvider = ({ children }) => {
   const addToCart = (item) => {
     cartItems.push(item)
     storeArrayInLocalStorage(cartItems);
-  };
+  }; // I should change this 
 
   const removeFromCart = (index) => {
     const newCartItems = [...cartItems];
-    newCartItems.splice(index, 1);
-    setCartItems(newCartItems);
-    storeArrayInLocalStorage(newCartItems)
+    const filtered = newCartItems.filter( item => item.id !== index)
+    setCartItems(filtered);
+    storeArrayInLocalStorage(filtered)
   };
+
+
+  /* 
+    const decreaseQuantity = (index) => {
+      const newCartItems = [...cartItems];
+      newCartItems.splice(index, 1);
+      setCartItems(newCartItems);
+      storeArrayInLocalStorage(newCartItems);
+  };
+  */
 
   const clearCart = () => {
     setCartItems([]);
