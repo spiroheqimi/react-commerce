@@ -1,8 +1,9 @@
+import { useEffect } from "react";
 import { useCart } from "../../Context/CartContext";
 import CartProduct from "./CartProduct";
 
 export default function () {
-  const { cartItems, removeFromCart, clearCart } = useCart();
+  const { cartItems, removeFromCart,setCartItems , clearCart } = useCart();
 
   /* 
 
@@ -13,19 +14,23 @@ export default function () {
       
   */
 
-  const aggregatedItems = cartItems.reduce((list, item) => {
-    if (list[item.id]) {
-      // Increment quantity if the item exists
-      list[item.id].quantity += 1;
-    } else {
-      // Initialize with quantity 1 if the item doesn't exist
-      list[item.id] = { ...item, quantity: 1 };
-    }
-    return list;
-  }, {});
+  function quantity(){
+    const aggregatedItems = cartItems.reduce((list, item) => {
+      if (list[item.id]) {
+        // Increment quantity if the item exists
+        list[item.id].quantity += 1;
+      } else {
+        // Initialize with quantity 1 if the item doesn't exist
+        list[item.id] = { ...item, quantity: 1 };
+      }
+      return list;
+    }, {}); // empty brackets are initial value of "list"
+    const displayCartItems = Object.values(aggregatedItems);
+    setCartItems(displayCartItems)
+  }
 
   //Convertion into array of objects so we can consume this data later
-  const displayCartItems = Object.values(aggregatedItems);
+  
 
   const handleRemoveFromCart = (index) => {
     removeFromCart(index);
@@ -38,7 +43,7 @@ export default function () {
   return (
     <div>
       <div className="w-screen h-full flex flex-col justify-center">
-        {displayCartItems.map((item, index) => (
+        {cartItems.map((item, index) => (
           <div
             className="w-full h-full flex justify-between items-center px-36 py-5"
             key={index}

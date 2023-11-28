@@ -5,23 +5,15 @@ import Image from "next/image";
 export default function CartProduct({ product }) {
   // Function that will change the quantity number based on the Selected
 
-  const { cartItems, addToCart , decreaseQuantity  } = useCart();
+  const { addToCart , removeFromCart  } = useCart();
 
   const [selectedOption, setSelectedOption] = useState(product.quantity);
-  const currentQuantity = product.quantity
+
   const handleChange = (event) => {
     setSelectedOption(event.target.value)
-  };
-
-  function handleQuantityChange(selectedOption, currentQuantity){
-    const delta = currentQuantity - selectedOption
-    if(delta > 0){
-      // decreaseQuantity(product)
-    } else if(delta < 0){
-      // addToCart(product)
-    }
-  } 
-  
+    console.log(event.target.value,"selected")
+    product.quantity = event.target.value
+  }
 
   console.log(product.quantity)
 

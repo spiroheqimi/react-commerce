@@ -37,26 +37,17 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addToCart = (item) => {
-    cartItems.push(item)
+    cartItems.push(item);
     storeArrayInLocalStorage(cartItems);
-  }; // I should change this 
+  }; // I should change this
 
-  const removeFromCart = (index) => {
+  const removeFromCart = (id) => {
     const newCartItems = [...cartItems];
-    const filtered = newCartItems.filter( item => item.id !== index)
+    const filtered = newCartItems.filter((item) => item.id !== id);
     setCartItems(filtered);
-    storeArrayInLocalStorage(filtered)
+    storeArrayInLocalStorage(filtered);
   };
 
-
-  /* 
-    const decreaseQuantity = (index) => {
-      const newCartItems = [...cartItems];
-      newCartItems.splice(index, 1);
-      setCartItems(newCartItems);
-      storeArrayInLocalStorage(newCartItems);
-  };
-  */
 
   const clearCart = () => {
     setCartItems([]);
@@ -65,7 +56,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart }}
+      value={{ cartItems,setCartItems ,addToCart, removeFromCart, clearCart }}
     >
       {children}
     </CartContext.Provider>
