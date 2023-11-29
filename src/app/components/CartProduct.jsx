@@ -1,21 +1,52 @@
-import {useState} from "react";
+import { useState } from "react";
 import { useCart } from "../../Context/CartContext";
 import Image from "next/image";
 
 export default function CartProduct({ product }) {
   // Function that will change the quantity number based on the Selected
 
-  const { addToCart , removeFromCart  } = useCart();
+  const { addToCart, reduceQuantity } = useCart();
 
   const [selectedOption, setSelectedOption] = useState(product.quantity);
 
   const handleChange = (event) => {
-    setSelectedOption(event.target.value)
-    console.log(event.target.value,"selected")
-    product.quantity = event.target.value
-  }
+    setSelectedOption(event.target.value);
+    console.log(event.target.value, "selected");
+    const quantityDiff = product.quantity - event.target.value;
 
-  console.log(product.quantity)
+    if ( quantityDiff < 0 ) {
+      for (let i = 0; i < Math.abs(quantityDiff); i++) {
+        addToCart(product)
+      }
+    } else if( quantityDiff > 0 ){
+      for (let i = 0; i < Math.abs(quantityDiff); i++) {
+        reduceQuantity(product)
+      }
+    }
+  };
+
+  /* 
+  
+  const increaseQuantity = (itemId) => {
+    const updatedCart = cartItems.map((item) =>
+      item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setCartItems(updatedCart);
+  };
+
+  const decreaseQuantity = (itemId) => {
+    const updatedCart = cartItems.map((item) =>
+      item.id === itemId && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
+    );
+    setCartItems(updatedCart);
+  };
+  
+  
+  
+  
+  */
+
+  console.log(product.quantity);
 
   return (
     <div>
@@ -51,7 +82,9 @@ export default function CartProduct({ product }) {
 }
 
 /* 
-  !! I should trigger add/remove func n times when the quantity changes ( n - delta of old quant and selected quant )
-
+  
+  Can add 2 buttons aside of quantity.
+    - Increase
+    - Decrease
   
 */

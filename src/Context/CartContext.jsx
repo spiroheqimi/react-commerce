@@ -37,9 +37,30 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addToCart = (item) => {
-    cartItems.push(item);
-    storeArrayInLocalStorage(cartItems);
-  }; // I should change this
+    // The quantity function should be added here
+    const updatedCart = [...cartItems];
+    const existingItem = updatedCart.find((cartItem) => cartItem.id === item.id);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      updatedCart.push({ ...item, quantity: 1 });
+    }
+    setCartItems(updatedCart);
+    storeArrayInLocalStorage(updatedCart);
+  }; 
+  
+  const reduceQuantity = (item) => {
+    // The quantity function should be added here
+    const updatedCart = [...cartItems];
+    const existingItem = updatedCart.find((cartItem) => cartItem.id === item.id);
+
+    if (existingItem) {
+      existingItem.quantity -= 1;
+    }
+    setCartItems(updatedCart);
+    storeArrayInLocalStorage(updatedCart);
+  }; 
 
   const removeFromCart = (id) => {
     const newCartItems = [...cartItems];
@@ -56,7 +77,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cartItems,setCartItems ,addToCart, removeFromCart, clearCart }}
+      value={{ cartItems,reduceQuantity ,addToCart, removeFromCart, clearCart }}
     >
       {children}
     </CartContext.Provider>

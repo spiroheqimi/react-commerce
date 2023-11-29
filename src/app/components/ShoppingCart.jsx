@@ -3,23 +3,7 @@ import { useCart } from "../../Context/CartContext";
 import CartProduct from "./CartProduct";
 
 export default function () {
-  const { cartItems, removeFromCart,setCartItems , clearCart } = useCart();
-
-  function quantity(){
-    const aggregatedItems = cartItems.reduce((list, item) => {
-      if (list[item.id]) {
-        // Increment quantity if the item exists
-        list[item.id].quantity += 1;
-      } else {
-        // Initialize with quantity 1 if the item doesn't exist
-        list[item.id] = { ...item, quantity: 1 };
-      }
-      return list;
-    }, {}); // empty brackets are initial value of "list"
-    const displayCartItems = Object.values(aggregatedItems);
-    setCartItems(displayCartItems)
-  }
-  
+  const { cartItems, removeFromCart, clearCart } = useCart();
 
   const handleRemoveFromCart = (index) => {
     removeFromCart(index);
