@@ -5,15 +5,6 @@ import CartProduct from "./CartProduct";
 export default function () {
   const { cartItems, removeFromCart,setCartItems , clearCart } = useCart();
 
-  /* 
-
-      Change the array before displaying it.
-      When mapped the new array will show the quantity on the pruducts added on list
-      If in list quantity default value will be 1 and for every duplication the quantity number will increase
-      And since this is a new array it wont mess up the numbers on poducts JSON file 
-      
-  */
-
   function quantity(){
     const aggregatedItems = cartItems.reduce((list, item) => {
       if (list[item.id]) {
@@ -28,8 +19,6 @@ export default function () {
     const displayCartItems = Object.values(aggregatedItems);
     setCartItems(displayCartItems)
   }
-
-  //Convertion into array of objects so we can consume this data later
   
 
   const handleRemoveFromCart = (index) => {
