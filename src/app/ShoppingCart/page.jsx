@@ -7,14 +7,13 @@ let roundedCartPrice;
 
 export default function page() {
   const { cartItems } = useCart();
+  
   // The number in the end of the reduce method sets the "total" value.
-
-  //This should change ( maybe useEffect() )
   const cartPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   roundedCartPrice = Math.round(cartPrice * 100) / 100;
 
   return (
-    <div className="min-h-screen min-w-screen flex flex-col items-center gap-20">
+    <div className="min-h-screen min-w-screen flex flex-col items-center gap-10">
       <div className="w-full h-full px-20 py-16 flex flex-col items-center gap-5">
         <h1 className="text-4xl font-semibold">
           Your bag total is ${roundedCartPrice}
@@ -25,7 +24,7 @@ export default function page() {
         </button>
       </div>
 
-      <div className="w-full h-full px-10 flex flex-col items-center justify-between gap-10">
+      <div className="w-full h-full px-10 flex flex-col items-center justify-between">
         <h1 className="text-4xl font-semibold"> Your Cart </h1>
         <ShoppingCart />
       </div>

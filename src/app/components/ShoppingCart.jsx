@@ -1,13 +1,12 @@
-import { useEffect } from "react";
 import { useCart } from "../../Context/CartContext";
 import CartProduct from "./CartProduct";
+import CartPrice from "./CartPrice";
 
 export default function () {
-  const { cartItems, removeFromCart, clearCart } = useCart();
+  const { cartItems, clearCart } = useCart();
 
-  const handleRemoveFromCart = (index) => {
-    removeFromCart(index);
-  };
+  const itemPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  const price = Math.round(itemPrice * 100) / 100;
 
   const handleClearCart = () => {
     clearCart();
@@ -22,15 +21,11 @@ export default function () {
             key={index}
           >
             <CartProduct product={item} />
-            <button
-              className="bg-black my-10 py-3 px-10 rounded-md border-[3px] border-black text-white text-sm font-medium hover:bg-white hover:border-[3px] hover:border-black hover:text-black"
-              onClick={() => handleRemoveFromCart(item.id)}
-            >
-              Remove
-            </button>
           </div>
         ))}
-        {/*  Total  */}
+        <div className="w-[80%] h-full flex flex-col items-end py-10 px-13">
+          <CartPrice price={price}/>
+        </div>
         <div className="flex justify-center">
           <button
             className="bg-black my-10 py-4 px-16 rounded-md border-[3px] border-black text-white text-xl font-semibold hover:bg-white hover:border-[3px] hover:border-black hover:text-black"

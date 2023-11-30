@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function CartProduct({ product }) {
   // Function that will change the quantity number based on the Selected
 
-  const { addToCart, reduceQuantity } = useCart();
+  const { addToCart, reduceQuantity, removeFromCart } = useCart();
 
   const [selectedOption, setSelectedOption] = useState(product.quantity);
 
@@ -25,12 +25,16 @@ export default function CartProduct({ product }) {
     }
   };
 
-  const itemPrice = product.quantity*product.price;
+  const handleRemoveFromCart = (index) => {
+    removeFromCart(index);
+  };
+
+  const itemPrice = product.quantity * product.price;
   const price = Math.round(itemPrice * 100) / 100;
 
   return (
-    <div className="w-[50%] h-full ">
-      <div className="w-full h-full py-36 flex p-10  gap-10 border-b-2 border-gray-400">
+    <div className="w-[65%] h-full ">
+      <div className="w-full h-full py-36 flex p-10 gap-10 border-b-2 border-gray-400">
         <div>
           <Image
             src={product.image}
@@ -40,13 +44,20 @@ export default function CartProduct({ product }) {
           />
         </div>
 
-        <div className="w-full flex justify-end items-center gap-10 px-20">
+        <div className="w-full flex justify-center items-center gap-10 px-10">
           <div className="w-full h-full flex flex-col gap-2">
             <h1 className="text-xl font-semibold">{product.name}</h1>
-            <h1 className="text-lg font-medium"> Price: ${price}</h1>
-            <h1 className="text-lg font-medium"> Description: {product.description}</h1>
+            <h1 className="text-lg font-medium">{product.description}</h1>
+            <div className="w-full h-full py-10 border-t-2 border-b-2 border-gray-400 ">
+              <h1 className="text-sm font-normal">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
+                numquam maxime veritatis ex quasi a! Ex officiis nesciunt, odit
+                voluptatibus accusamus quia quidem libero illo sint sed? Sequi,
+                vel asperiores.
+              </h1>
+            </div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="h-full flex">
             <select
               className="h-8 w-12 rounded-md "
               value={selectedOption}
@@ -63,6 +74,15 @@ export default function CartProduct({ product }) {
               <option value="9"> 9</option>
               <option value="10"> 10</option>
             </select>
+          </div>
+          <div className="h-full flex flex-col items-center justify-between py-1">
+            <h1 className="text-xl font-semibold"> ${price}</h1>
+            <button
+              className="bg-black my-10 py-3 px-10 rounded-md border-[3px] border-black text-white text-sm font-medium hover:bg-white hover:border-[3px] hover:border-black hover:text-black"
+              onClick={() => handleRemoveFromCart(product.id)}
+            >
+              Remove
+            </button>
           </div>
         </div>
       </div>
