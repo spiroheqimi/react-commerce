@@ -54,7 +54,7 @@ export default function ({ params }) {
                 <button 
                   onClick={() => handleAddToCart(product)}
                   className="bg-white py-2 px-8 rounded-md border-[3px] border-black font-bold hover:bg-black hover:text-white active:scale-95 transition-transform">
-                  ADD TO CHART  
+                  ADD TO CART  
                 </button>
               </div>
               <p className="w-full font-bold text-3xl"> Details </p>
