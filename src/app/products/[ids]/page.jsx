@@ -28,12 +28,12 @@ export default function ({ params }) {
                 <p className="w-full font-semibold text-lg"> {product.description} </p>
               </div>
               <div className="w-full flex items-end gap-5">
-                <h1 className="font-bold text-2xl"> ${product.price} </h1>
+                <p className="font-bold text-2xl"> ${product.price} </p>
               </div>
 
               <div className="w-full flex flex-col gap-4">
                 <div>
-                  <h1 className="w-full font-bold text-xl"> Sizes </h1>
+                  <p className="w-full font-bold text-xl"> Sizes </p>
                 </div>
 
                 <div className="w-full flex gap-4">
@@ -57,7 +57,7 @@ export default function ({ params }) {
                   ADD TO CHART  
                 </button>
               </div>
-              <h1 className="w-full font-bold text-3xl"> Details </h1>
+              <p className="w-full font-bold text-3xl"> Details </p>
               <p>
                 {product.description}
               </p>

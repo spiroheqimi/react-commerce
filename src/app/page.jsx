@@ -13,7 +13,7 @@ export default function Home() {
           <div className="flex flex-col w-96 gap-5">
             <h1 className="text-7xl font-bold"> Men's Collection </h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <button className="w-40 bg-black text-white py-3 px-5">
+            <button className="w-40 bg-black rounded-md text-white py-3 px-5">
               SHOP NOW
             </button>
           </div>
@@ -28,21 +28,21 @@ export default function Home() {
           <div className="w-96 flex gap-8 items-center py-4 pl-5">
             <FiPhoneCall color="#BD995B" size={70} />
             <div className="flex flex-col gap-2">
-              <h1 className="text-xl font-bold"> Free Shipping </h1>
+              <p className="text-xl font-bold"> Free Shipping </p>
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
           </div>
           <div className="w-96 flex gap-8 items-center py-4 border-x-2 border-secondary-color px-5">
             <FiPhoneCall color="#BD995B" size={70} />
             <div className="flex flex-col gap-2">
-              <h1 className="text-xl font-bold"> Free Shipping </h1>
+              <p className="text-xl font-bold"> Free Shipping </p>
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
           </div>
           <div className="w-96 flex gap-8 items-center py-4 px-5">
             <FiPhoneCall color="#BD995B" size={70} />
             <div className="flex flex-col gap-2">
-              <h1 className="text-xl font-bold"> Free Shipping </h1>
+              <p className="text-xl font-bold"> Free Shipping </p>
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
           </div>
@@ -67,67 +67,67 @@ export default function Home() {
         </div>
 
         <div className="w-screen h-screen flex flex-col items-center">
-          <h1 className="font-bold text-3xl">NEW ARRIVALS</h1>
+          <p className="font-bold text-3xl">NEW ARRIVALS</p>
           <div className="w-full h-full grid grid-cols-4 grid-rows-2 px-64 py-32 gap-10 ">
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
               {/* image */}
-              <h1 className="font-semibold text-xl"> Products </h1>
-              <h1 className="font-medium text-lg">
+              <p className="font-semibold text-xl"> Products </p>
+              <p className="font-medium text-lg">
                 <span className="text-secondary-color pr-1">$</span>120.50
-              </h1>
+              </p>
             </div>
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
               {/* image */}
-              <h1 className="font-semibold text-xl"> Products </h1>
-              <h1 className="font-medium text-lg">
+              <p className="font-semibold text-xl"> Products </p>
+              <p className="font-medium text-lg">
                 <span className="text-secondary-color pr-1">$</span>120.50
-              </h1>
+              </p>
             </div>
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
               {/* image */}
-              <h1 className="font-semibold text-xl"> Products </h1>
-              <h1 className="font-medium text-lg">
+              <p className="font-semibold text-xl"> Products </p>
+              <p className="font-medium text-lg">
                 <span className="text-secondary-color pr-1">$</span>120.50
-              </h1>
+              </p>
             </div>
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
               {/* image */}
-              <h1 className="font-semibold text-xl"> Products </h1>
-              <h1 className="font-medium text-lg">
+              <p className="font-semibold text-xl"> Products </p>
+              <p className="font-medium text-lg">
                 <span className="text-secondary-color pr-1">$</span>120.50
-              </h1>
+              </p>
             </div>
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
               {/* image */}
-              <h1 className="font-semibold text-xl"> Products </h1>
-              <h1 className="font-medium text-lg">
+              <p className="font-semibold text-xl"> Products </p>
+              <p className="font-medium text-lg">
                 <span className="text-secondary-color pr-1">$</span>120.50
-              </h1>
+              </p>
             </div>
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
               {/* image */}
-              <h1 className="font-semibold text-xl"> Products </h1>
-              <h1 className="font-medium text-lg">
+              <p className="font-semibold text-xl"> Products </p>
+              <p className="font-medium text-lg">
                 <span className="text-secondary-color pr-1">$</span>120.50
-              </h1>
+              </p>
             </div>
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
               {/* image */}
-              <h1 className="font-semibold text-xl"> Products </h1>
-              <h1 className="font-medium text-lg">
+              <p className="font-semibold text-xl"> Products </p>
+              <p className="font-medium text-lg">
                 <span className="text-secondary-color pr-1">$</span>120.50
-              </h1>
+              </p>
             </div>
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
               {/* image */}
-              <h1 className="font-semibold text-xl"> Products </h1>
-              <h1 className="font-medium text-lg">
+              <p className="font-semibold text-xl"> Products </p>
+              <p className="font-medium text-lg">
                 <span className="text-secondary-color pr-1">$</span>120.50
-              </h1>
+              </p>
             </div>
           </div>
 
-          <button className="w-40 bg-black text-white py-3 px-5">
+          <button className="w-40 bg-black rounded-md text-white py-3 px-5">
             VIEW MORE
           </button>
         </div>
@@ -137,13 +137,13 @@ export default function Home() {
         </div>
 
         <div className="w-screen h-screen flex flex-col items-center gap-20">
-          <h1 className="font-bold text-3xl"> Best Seller </h1>
+          <p className="font-bold text-3xl"> Best Seller </p>
           <div className="w-full flex justify-center px-48">
             <Slider />
             
           </div>
           <Link href="/products">
-          <button className="w-40 bg-black text-white py-3 px-5">
+          <button className="w-40 bg-black rounded-md text-white py-3 px-5">
             VIEW MORE
           </button>
           </Link>

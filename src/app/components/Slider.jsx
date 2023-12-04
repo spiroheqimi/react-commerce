@@ -40,8 +40,8 @@ export default function Slider() {
                 <div className="w-full h-20 flex flex-col items-center gap-2">
                   <h1 className="text-black font-bold text-xl pt-2"> {product.name}</h1>
                   <div className="flex justify-center items-center gap-3">
-                    <h1 className="font-semibold text-secondary-color "> ${product.price} </h1>
-                    <h1 className="font-semibold text-black underline-offset-1 line-through"> $199 </h1>
+                    <p className="font-semibold text-secondary-color "> ${product.price} </p>
+                    <p className="font-semibold text-black underline-offset-1 line-through"> $199 </p>
                   </div>
                 </div>
               </div>

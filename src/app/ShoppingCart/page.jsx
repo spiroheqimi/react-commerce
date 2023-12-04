@@ -18,14 +18,14 @@ export default function page() {
         <h1 className="text-4xl font-semibold">
           Your bag total is ${roundedCartPrice}
         </h1>
-        <h1 className="text-lg "> Free delivery and free returns. </h1>
+        <p className="text-lg "> Free delivery and free returns. </p>
         <button className="bg-black my-10 py-4 px-16 rounded-md border-[3px] border-black text-white text-xl font-semibold hover:bg-white hover:border-[3px] hover:border-black hover:text-black">
           Check out
         </button>
       </div>
 
       <div className="w-full h-full px-10 flex flex-col items-center justify-between">
-        <h1 className="text-4xl font-semibold"> Your Cart </h1>
+        <p className="text-4xl font-semibold"> Your Cart </p>
         <ShoppingCart />
       </div>
     </div>

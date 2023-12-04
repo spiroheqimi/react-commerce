@@ -25,10 +25,6 @@ export default function CartProduct({ product }) {
     }
   };
 
-  const handleRemoveFromCart = (index) => {
-    removeFromCart(index);
-  };
-
   const itemPrice = product.quantity * product.price;
   const price = Math.round(itemPrice * 100) / 100;
 
@@ -47,14 +43,14 @@ export default function CartProduct({ product }) {
         <div className="w-full flex justify-center items-center gap-10 px-10">
           <div className="w-full h-full flex flex-col gap-2">
             <h1 className="text-xl font-semibold">{product.name}</h1>
-            <h1 className="text-lg font-medium">{product.description}</h1>
+            <p className="text-lg font-medium">{product.description}</p>
             <div className="w-full h-full py-10 border-t-2 border-b-2 border-gray-400 ">
-              <h1 className="text-sm font-normal">
+              <p className="text-sm font-normal">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
                 numquam maxime veritatis ex quasi a! Ex officiis nesciunt, odit
                 voluptatibus accusamus quia quidem libero illo sint sed? Sequi,
                 vel asperiores.
-              </h1>
+              </p>
             </div>
           </div>
           <div className="h-full flex">
@@ -76,10 +72,10 @@ export default function CartProduct({ product }) {
             </select>
           </div>
           <div className="h-full flex flex-col items-center justify-between py-1">
-            <h1 className="text-xl font-semibold"> ${price}</h1>
+            <p className="text-xl font-semibold"> ${price}</p>
             <button
               className="bg-black my-10 py-3 px-10 rounded-md border-[3px] border-black text-white text-sm font-medium hover:bg-white hover:border-[3px] hover:border-black hover:text-black"
-              onClick={() => handleRemoveFromCart(product.id)}
+              onClick={() => removeFromCart(product.id)}
             >
               Remove
             </button>
