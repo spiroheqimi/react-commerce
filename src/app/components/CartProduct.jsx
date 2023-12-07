@@ -11,7 +11,6 @@ export default function CartProduct({ product }) {
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
-    console.log(event.target.value, "selected");
     const quantityDiff = product.quantity - event.target.value;
 
     if (quantityDiff < 0) {

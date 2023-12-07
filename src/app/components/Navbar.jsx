@@ -26,8 +26,13 @@ export default function Navbar() {
             </button>
           </div>
           <div className="flex gap-6">
-            <button className="text-white font-bold"> Sign In </button>
-            <button className="text-white font-bold"> Sign Up </button>
+            {/* I need to make this div display only for viewers not users */}
+            <Link href="/signin">
+              <button className="text-white font-bold"> Sign in </button>
+            </Link>
+            <Link href="/register">
+              <button className="text-white font-bold"> Register </button>
+            </Link>
           </div>
         </div>
 
