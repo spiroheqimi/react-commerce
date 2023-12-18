@@ -18,7 +18,7 @@ export default function ({ params }) {
           <div className="w-full h-screen flex gap-20 p-20">
             <div className="w-[50%] h-full flex justify-center items-center">
               <div className="w-full h-[70%] mx-10">
-                <Slider />
+                <Slider/>
               </div>
             </div>
 

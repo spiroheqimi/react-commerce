@@ -1,6 +1,7 @@
 "use client"
 
 import { readUsers, writeUsers } from "../components/UsersData"
+import users from "../users.json"
 import { useState } from "react"
 
 export default function page() {
@@ -8,14 +9,20 @@ export default function page() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const users = readUsers();
-  console.log(users)
+  const newUser = {
+    "id" : 2,
+    "email" : "spiroheqimi2000@gmail.com",
+    "password" : "spiro123"
+  }
 
+  console.log(users)
 
   const handleSignUp = () => {
     
-
+    // Will create an object with id = users.length + 1 , email and password 
+    // and then push it into the JSON file
   }
+
 
 
   return (
@@ -46,6 +53,9 @@ export default function page() {
   Duplicated emails arent allowed
   Function to map all users, in case there is a duplication , throw error 
 
+
+
+  Maybe use Prisma 
 
 
 
