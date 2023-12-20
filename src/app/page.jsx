@@ -52,16 +52,16 @@ export default function Home() {
           <div className="w-full h-full grid grid-cols-3 grid-rows-2 px-64 py-32 gap-10">
             {/* Cards */}
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full ">
-              div 1
+              banner 1
             </div>
             <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full ">
-              div 2
+              banner 2
             </div>
             <div className="border-2 border-secondary-color col-span-1 row-span-2 w-full h-full ">
-              div 3
+              banner 3
             </div>
             <div className="border-2 border-secondary-color col-span-2 row-span-1 w-full h-full ">
-              div 4
+              banner 4
             </div>
           </div>
         </div>
