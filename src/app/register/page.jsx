@@ -1,6 +1,5 @@
 "use client"
 
-import { readUsers, writeUsers } from "../components/UsersData"
 import users from "../users.json"
 import { useState } from "react"
 
