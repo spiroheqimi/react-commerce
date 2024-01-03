@@ -8,22 +8,12 @@ import {
 } from "react-icons/fa";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { useCart } from "../../Context/CartContext";
 
 export default function Navbar() {
 
-  const [ countProducts, setCountProducts] = useState();
   const { cartItems } = useCart();
-
-  function searchLocal() {
-    setCountProducts(cartItems.length)
-  }
-
-  useEffect(() => {
-    searchLocal();
-  },);
-
+  const cartProducts = cartItems.length
 
   return (
     <div>
@@ -83,7 +73,7 @@ export default function Navbar() {
             <Link className="relative p-1" href="/ShoppingCart">
               <FiShoppingBag size={25} />
               <div className="bg-black h-[18px] w-[18px] absolute top-0 right-0 flex justify-center items-center text-white text-[12px] rounded-full">
-                {countProducts}
+                {cartProducts}
               </div>
             </Link>
           </div>

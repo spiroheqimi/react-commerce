@@ -1,27 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import menimg from "public/men-collection.png"
+import menimg from "public/men-collection.png";
 import { FiPhoneCall } from "react-icons/fi";
 import Slider from "./components/Slider";
 
 export default function Home() {
   return (
     <>
-    <main className="flex flex-col w-screen min-h-screen items-center justify-between">
-      <section className="h-128 w-screen bg-secondary-color ">
-        <div className="h-full w-full flex justify-center items-center ">
-          <div className="flex flex-col w-96 gap-5">
-            <h1 className="text-7xl font-bold"> Men's Collection </h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <button className="w-40 bg-black rounded-md text-white py-3 px-5">
-              SHOP NOW
-            </button>
+      <main className="flex flex-col w-screen min-h-screen items-center justify-between">
+        <section className="h-128 w-screen bg-secondary-color ">
+          <div className="h-full w-full flex justify-center items-center ">
+            <div className="flex flex-col w-96 gap-5">
+              <h1 className="text-7xl font-bold"> Men's Collection </h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <button className="w-40 bg-black rounded-md text-white py-3 px-5">
+                SHOP NOW
+              </button>
+            </div>
+            <div className="w-1/2 h-full flex justify-end items-center overflow-hidden">
+              <Image src={menimg} alt="men" width={750} height={750} />
+            </div>
           </div>
-          <div className="w-1/2 h-full flex justify-end items-center overflow-hidden">
-            <Image src={menimg} alt="men" width={750} height={750} />
-          </div>
-        </div>
-      </section>
+        </section>
 
         {/* Services  */}
         <section className="w-screen bg-white flex justify-center items-center border-b-2 border-secondary-color gap-5">
@@ -51,17 +51,33 @@ export default function Home() {
         <div className="w-screen h-screen py-10">
           <div className="w-full h-full grid grid-cols-3 grid-rows-2 px-64 py-32 gap-10">
             {/* Cards */}
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full ">
-              banner 1
+            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col justify-end p-8 gap-3">
+              <p className="text-2xl font-bold">MEN'S SNEAKERS</p>
+
+              <button className="w-40 bg-white rounded-md border-black border-4 text-black py-3 px-3 font-bold">
+                <Link href="/products"> SHOP NOW </Link>
+              </button>
             </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full ">
-              banner 2
+            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col justify-end p-8 gap-3">
+              <p className="text-2xl font-bold">MEN'S SHOES</p>
+
+              <button className="w-40 bg-white rounded-md border-black border-4 text-black py-3 px-3 font-bold">
+                <Link href="/products"> SHOP NOW </Link>
+              </button>
             </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-2 w-full h-full ">
-              banner 3
+            <div className="border-2 border-secondary-color col-span-1 row-span-2 w-full h-full flex flex-col justify-end p-8 gap-3">
+              <p className="text-2xl font-bold">MEN'S T-SHIRT</p>
+
+              <button className="w-40 bg-white rounded-md border-black border-4 text-black py-3 px-3 font-bold">
+                <Link href="/products"> SHOP NOW </Link>
+              </button>
             </div>
-            <div className="border-2 border-secondary-color col-span-2 row-span-1 w-full h-full ">
-              banner 4
+            <div className="border-2 border-secondary-color col-span-2 row-span-1 w-full h-full flex flex-col justify-end p-8 gap-3">
+              <p className="text-2xl font-bold">MEN'S COLLECTION</p>
+
+              <button className="w-40 bg-white rounded-md border-black border-4 text-black py-3 px-3 font-bold">
+                <Link href="/products"> SHOP NOW </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -140,16 +156,14 @@ export default function Home() {
           <p className="font-bold text-3xl"> Best Seller </p>
           <div className="w-full flex justify-center px-48">
             <Slider />
-            
           </div>
           <Link href="/products">
-          <button className="w-40 bg-black rounded-md text-white py-3 px-5">
-            VIEW MORE
-          </button>
+            <button className="w-40 bg-black rounded-md text-white py-3 px-5">
+              VIEW MORE
+            </button>
           </Link>
-          
         </div>
-    </main>
+      </main>
     </>
   );
 }
