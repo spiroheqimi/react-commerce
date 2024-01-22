@@ -81,7 +81,7 @@ export default function Footer() {
               type="text"
               className="border-2 rounded-md border-white bg-transparent placeholder:text-white placeholder:text-sm px-4 py-2 focus:outline-none focus:placeholder-transparent"
             />
-            <button className="px-8 py-2 bg-black rounded-md text-base font-medium">Submit</button>
+            <button className="px-8 py-2 bg-black rounded-md text-base font-semibold tracking-widest">SUBMIT</button>
           </div>
 
           <div className="w-full">

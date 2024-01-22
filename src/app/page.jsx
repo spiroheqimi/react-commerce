@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import menimg from  "/public/men-collection.png";
+import menimg from "/public/men-collection.png";
+import collectionimg from "/public/img4.jpg";
+import shirtimg from "/public/img3.jpg";
+import shoesimg from "/public/shoes-img.jpg";
+import sneakersimg from "/public/img1-shoes.jpg";
+import banner from "/public/banner.jpeg";
 import { FiPhoneCall } from "react-icons/fi";
 import Slider from "./components/Slider";
+import NewArrivals from "./components/NewArrivals";
 
 export default function Home() {
   return (
@@ -13,7 +19,7 @@ export default function Home() {
             <div className="flex flex-col w-96 gap-5">
               <h1 className="text-7xl font-bold"> Men's Collection </h1>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-              <button className="w-40 bg-black rounded-md text-white py-3 px-5">
+              <button className="w-40 bg-black rounded-md text-white font-bold py-3 px-5">
                 SHOP NOW
               </button>
             </div>
@@ -48,108 +54,76 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="w-screen h-screen py-10">
+        {/* CARDS */}
+
+        <section className="w-screen h-screen py-10">
           <div className="w-full h-full grid grid-cols-3 grid-rows-2 px-64 py-32 gap-10">
-            {/* Cards */}
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col justify-end p-8 gap-3">
-              <p className="text-2xl font-bold">MEN'S SNEAKERS</p>
-
-              <button className="w-40 bg-white rounded-md border-black border-4 text-black py-3 px-3 font-bold">
-                <Link href="/products"> SHOP NOW </Link>
-              </button>
+            <div className="border-3 border-secondary-color col-span-1 row-span-1 h-full flex flex-col justify-end gap-3">
+              <div className="h-full w-full overflow-hidden">
+                <Image objectFit="contain" src={sneakersimg} alt="men" />
+              </div>
+              <div className="absolute text-white p-8">
+                <p className="text-2xl font-bold py-2">MEN'S SNEAKERS</p>
+                <button className="bg-black py-3 px-8 rounded-md font-bold hover:bg-black hover:text-white hover:scale-95 transition-transform">
+                  <Link href="/products"> SHOP NOW </Link>
+                </button>
+              </div>
             </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col justify-end p-8 gap-3">
-              <p className="text-2xl font-bold">MEN'S SHOES</p>
 
-              <button className="w-40 bg-white rounded-md border-black border-4 text-black py-3 px-3 font-bold">
-                <Link href="/products"> SHOP NOW </Link>
-              </button>
+            <div className="border-3 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col justify-end gap-3">
+              <div className="h-full w-full overflow-hidden">
+                <Image objectFit="contain" src={shoesimg} alt="men" />
+              </div>
+
+              <div className="absolute text-white p-8">
+                <p className="text-2xl font-bold py-2">MEN'S SHOES</p>
+
+                <button className="bg-black py-3 px-8 rounded-md font-bold hover:bg-black hover:text-white hover:scale-95 transition-transform">
+                  <Link href="/products"> SHOP NOW </Link>
+                </button>
+              </div>
             </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-2 w-full h-full flex flex-col justify-end p-8 gap-3">
-              <p className="text-2xl font-bold">MEN'S T-SHIRT</p>
 
-              <button className="w-40 bg-white rounded-md border-black border-4 text-black py-3 px-3 font-bold">
-                <Link href="/products"> SHOP NOW </Link>
-              </button>
+            <div className="border-3 border-secondary-color col-span-1 row-span-2 w-full h-full flex flex-col justify-end gap-3">
+              <div className="h-full w-full overflow-hidden">
+                <Image objectFit="contain" src={shirtimg} alt="men" />
+              </div>
+              <div className="absolute text-white p-8">
+                <p className="text-2xl font-bold py-2">MEN'S T-SHIRT</p>
+
+                <button className="bg-black py-3 px-8 rounded-md font-bold hover:bg-black hover:text-white hover:scale-95 transition-transform">
+                  <Link href="/products"> SHOP NOW </Link>
+                </button>
+              </div>
             </div>
-            <div className="border-2 border-secondary-color col-span-2 row-span-1 w-full h-full flex flex-col justify-end p-8 gap-3">
-              <p className="text-2xl font-bold">MEN'S COLLECTION</p>
 
-              <button className="w-40 bg-white rounded-md border-black border-4 text-black py-3 px-3 font-bold">
-                <Link href="/products"> SHOP NOW </Link>
-              </button>
+            <div className=" border-3 border-secondary-color col-span-2 row-span-1 w-full h-full flex flex-col justify-end gap-3 ">
+              <div className="h-full w-full overflow-hidden">
+                <Image objectFit="contain" src={collectionimg} alt="men" />
+              </div>
+              <div className="absolute text-white p-8">
+                <p className="text-2xl font-bold py-2">MEN'S COLLECTION</p>
+
+                <button className="bg-black py-3 px-8 rounded-md font-bold hover:bg-black hover:text-white hover:scale-95 transition-transform">
+                  <Link href="/products"> SHOP NOW </Link>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="w-screen h-screen flex flex-col items-center">
-          <p className="font-bold text-3xl">NEW ARRIVALS</p>
-          <div className="w-full h-full grid grid-cols-4 grid-rows-2 px-64 py-32 gap-10 ">
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
-              {/* image */}
-              <p className="font-semibold text-xl"> Products </p>
-              <p className="font-medium text-lg">
-                <span className="text-secondary-color pr-1">$</span>120.50
-              </p>
-            </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
-              {/* image */}
-              <p className="font-semibold text-xl"> Products </p>
-              <p className="font-medium text-lg">
-                <span className="text-secondary-color pr-1">$</span>120.50
-              </p>
-            </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
-              {/* image */}
-              <p className="font-semibold text-xl"> Products </p>
-              <p className="font-medium text-lg">
-                <span className="text-secondary-color pr-1">$</span>120.50
-              </p>
-            </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
-              {/* image */}
-              <p className="font-semibold text-xl"> Products </p>
-              <p className="font-medium text-lg">
-                <span className="text-secondary-color pr-1">$</span>120.50
-              </p>
-            </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
-              {/* image */}
-              <p className="font-semibold text-xl"> Products </p>
-              <p className="font-medium text-lg">
-                <span className="text-secondary-color pr-1">$</span>120.50
-              </p>
-            </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
-              {/* image */}
-              <p className="font-semibold text-xl"> Products </p>
-              <p className="font-medium text-lg">
-                <span className="text-secondary-color pr-1">$</span>120.50
-              </p>
-            </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
-              {/* image */}
-              <p className="font-semibold text-xl"> Products </p>
-              <p className="font-medium text-lg">
-                <span className="text-secondary-color pr-1">$</span>120.50
-              </p>
-            </div>
-            <div className="border-2 border-secondary-color col-span-1 row-span-1 w-full h-full flex flex-col items-center justify-end gap-1 py-2">
-              {/* image */}
-              <p className="font-semibold text-xl"> Products </p>
-              <p className="font-medium text-lg">
-                <span className="text-secondary-color pr-1">$</span>120.50
-              </p>
-            </div>
-          </div>
+        {/*  NEW ARRIVALS */}
 
-          <button className="w-40 bg-black rounded-md text-white py-3 px-5">
+        <section className="w-full h-full flex flex-col items-center p-5 gap-10">
+          <NewArrivals />
+
+          <button className="w-40 bg-black rounded-md text-white font-bold py-3 px-5">
             VIEW MORE
           </button>
-        </div>
+        </section>
 
-        <div className="w-screen h-128 py-10 my-20">
-          <div className="h-full border-2 border-secondary-color">Banner</div>
+        <div className="w-screen h-128 py-10 my-20 overflow-hidden">
+          <Image src={banner} alt="banner" width={1920} height={300} />
         </div>
 
         <div className="w-screen h-screen flex flex-col items-center gap-20">
@@ -158,7 +132,7 @@ export default function Home() {
             <Slider />
           </div>
           <Link href="/products">
-            <button className="w-40 bg-black rounded-md text-white py-3 px-5">
+            <button className="w-40 bg-black rounded-md text-white font-bold py-3 px-5">
               VIEW MORE
             </button>
           </Link>
